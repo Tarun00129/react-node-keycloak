@@ -20,7 +20,7 @@ function App() {
     url: `${config.url.KEYCLOAK_BASE_URL}`,
     realm: "company-services",
     clientId: "movies-app",
-    clientSecret: 'AKb1fZXDlFMoLlPrpt5agTn6jbHIXrsX'
+    clientSecret: 'rD6rAGq1MkTzQFbqpibq39yS9rfGLMAx'
   })
   const initOptions = { pkceMethod: 'S256' }
 

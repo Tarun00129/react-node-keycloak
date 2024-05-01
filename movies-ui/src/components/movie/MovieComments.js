@@ -11,7 +11,6 @@ function MovieComments({ comments }) {
     overflowX: 'hidden',
     maxWidth: 'none'
   }
-  console.log(comments,"------------------comment, icomment, i");
   
   const commentList = comments.map((comment, i) => {
     return (
