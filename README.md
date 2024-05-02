@@ -222,3 +222,7 @@ app.listen(port, () => {
   console.log(`Server Started at ${port}`);
 });
  
+
+ ### To apply Custom Themes do following steps: 
+
+- Just relpace this themes folder with themes folder in the Keycloak decectory.
