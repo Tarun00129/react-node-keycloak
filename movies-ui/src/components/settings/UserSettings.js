@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom'
 import { useKeycloak } from '@react-keycloak/web'
 
 function UserSettings() {
-  const [username, setUsername] = useState('')
+  const [username, setUsername] = useState('admin')
   const [avatar, setAvatar] = useState('')
   const [originalAvatar, setOriginalAvatar] = useState('')
   const [imageLoading, setImageLoading] = useState(false)
@@ -19,8 +19,7 @@ function UserSettings() {
     const fetchUserExtras = async () => {
       try {
         const response = await moviesApi.getUserExtrasMe(keycloak.token)
-        const { username, avatar } = response.data
-        setUsername(username)
+        const avatar  = response.data.avatar
         setAvatar(avatar)
         setOriginalAvatar(avatar)
       } catch (error) {
@@ -32,7 +31,7 @@ function UserSettings() {
 
   const handleSuffle = () => {
     setImageLoading(true)
-    const newAvatar = username + Math.floor(Math.random() * 1000) + 1
+    const newAvatar = Math.floor(Math.random() * 1000) + 1
     setAvatar(newAvatar)
   }
 

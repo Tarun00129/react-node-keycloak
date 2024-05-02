@@ -5,6 +5,7 @@ import MovieCard from './MovieCard'
 function MovieList({ movies }) {
   const movieList = movies.map(movie => <MovieCard key={movie.imdbId} movie={movie} link={true} />)
 
+
   return (
     movies.length > 0 ? (
       <Card.Group doubling centered>
